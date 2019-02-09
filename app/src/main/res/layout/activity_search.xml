@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Search"
+    tools:showIn="@layout/activity_login">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SearchFlight"
+        android:id="@+id/textsearchF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="FlightNumber :"
+        android:id="@+id/Fnumtext"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/textsearchF"
+        android:layout_alignEnd="@+id/textsearchF" />
+
+    <EditText
+        android:hint="Enter Flight number here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputfn"
+        android:layout_alignTop="@+id/Fnumtext"
+        android:layout_toEndOf="@+id/Fnumtext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Origin :"
+        android:id="@+id/origintext"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/inputfn"
+        android:layout_alignEnd="@+id/destext" />
+
+    <EditText
+        android:hint="Enter Origin here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputorigin"
+        android:layout_alignTop="@+id/origintext"
+        android:layout_alignStart="@+id/inputfn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Destination :"
+        android:id="@+id/destext"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/inputorigin"
+        android:layout_alignStart="@+id/Fnumtext" />
+
+    <EditText
+        android:hint="Enter Destination here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputdest"
+        android:layout_alignTop="@+id/destext"
+        android:layout_alignStart="@+id/inputorigin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Dates :"
+        android:id="@+id/datetext"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/inputdest"
+        android:layout_alignStart="@+id/origintext" />
+
+    <EditText
+        android:hint="Enter Dates here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/inputdates"
+        android:layout_alignTop="@+id/datetext"
+        android:layout_alignStart="@+id/inputdest" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/searchbtn"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/inputdates"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginpgbtn"
+        android:layout_alignBottom="@+id/searchbtn"
+        android:layout_alignStart="@+id/destext"
+        android:onClick="Loginpage"/>
+
+</RelativeLayout>
